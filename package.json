@@ -1,0 +1,44 @@
+{
+  "name": "anki-tools",
+  "version": "1.0.0",
+  "description": "CLI tools for Anki card management",
+  "main": "src/cli.js",
+  "bin": {
+    "anki": "./src/cli.js"
+  },
+  "scripts": {
+    "start": "node src/cli.js",
+    "dev": "nodemon src/cli.js",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "prepare": "chmod +x src/cli.js",
+    "link": "npm link",
+    "unlink": "npm unlink",
+    "logs:clear": "rm -rf logs/*.log",
+    "logs:error": "tail -f logs/error.log",
+    "logs:all": "tail -f logs/combined.log"
+  },
+  "keywords": [
+    "anki",
+    "cli",
+    "flashcards"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "winston": "^3.11.0",
+    "yargs": "^17.7.2",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.2",
+    "nodemon": "^3.0.2",
+    "prettier": "^3.1.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
