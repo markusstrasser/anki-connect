@@ -1,7 +1,7 @@
 const { callAnkiConnect } = require("./ankiConnect");
 
 function stripHtml(html) {
-  let text = html.replace(/<[^>]*>/g, "");
+  const text = html.replace(/<[^>]*>/g, "");
   return text
     .replace(/&nbsp;/g, " ")
     .replace(/&amp;/g, "&")
